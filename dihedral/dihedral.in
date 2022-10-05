@@ -1,0 +1,17 @@
+parm ../step3_input.psf 
+
+trajin ../run1.nc
+trajin ../run2.nc
+trajin ../run3.nc
+trajin ../run4.nc
+trajin ../run5.nc
+
+multidihedral myDihedral1 phi psi resrange 1-30 out dihedral_A.dat
+run
+multidihedral myDihedral2 phi psi resrange 31-60 out dihedral_B.dat
+run
+
+multihist myDihedral[*] out dihedral.hist normint min -180 max 180 step 1
+stat all out stat.multidihedral.dat
+run
+

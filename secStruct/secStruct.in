@@ -1,0 +1,10 @@
+parm ../step3_input.psf 
+
+trajin ../run1.nc
+trajin ../run2.nc
+trajin ../run3.nc
+trajin ../run4.nc
+trajin ../run5.nc
+
+secstruct @CA,C,O,N,H nameh HN out dssp.out sumout dssp_avg.out
+#secstruct @CA,C,O,N,H out output.avgss sumout dssp.out

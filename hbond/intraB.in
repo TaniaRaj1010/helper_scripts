@@ -1,0 +1,12 @@
+# intra Hbonds in chainB backbone #
+
+parm ../step3_input.psf
+
+trajin ../run1.nc
+trajin ../run2.nc
+trajin ../run3.nc
+trajin ../run4.nc
+trajin ../run5.nc
+
+hbond angle 135 (:31-60)&(@CA,C,O,N,H) out intraB.dat avgout intraB_avgHbonds.dat
+go 
